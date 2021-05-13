@@ -1,0 +1,17 @@
+type vote {
+    id: Int
+    count: Int
+}
+
+type Mutation {
+    addVote: vote
+    incrementVote(id: Int): vote
+}
+
+type Query {
+    votes(id: Int): [vote]
+}
+
+type Subscription {
+    realVote(id: Int): vote
+}
